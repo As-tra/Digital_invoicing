@@ -1,4 +1,5 @@
 import 'package:digital_invoicing/utils/colors.dart';
+import 'package:digital_invoicing/widgets/ads_banner.dart';
 import 'package:digital_invoicing/widgets/income_and_expense_section.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,8 @@ class HomeViewBodyDetails extends StatelessWidget {
         children: const [
           SizedBox(height: 24),
           IncomeAndExpenseSection(),
+          SizedBox(height: 20),
+          AdsBanner(),
         ],
       ),
     );

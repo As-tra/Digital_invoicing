@@ -6,6 +6,10 @@ class Assets {
   /// assets/fonts/GTWalsheimPro-Regular.ttf
   static const String fontsGTWalsheimProRegular = "assets/fonts/GTWalsheimPro-Regular.ttf";
 
+  /// Assets for imagesArrow
+  /// assets/images/arrow.svg
+  static const String imagesArrow = "assets/images/arrow.svg";
+
   /// Assets for imagesArrowBack
   /// assets/images/Arrow_back.svg
   static const String imagesArrowBack = "assets/images/Arrow_back.svg";
@@ -25,6 +29,10 @@ class Assets {
   /// Assets for imagesIncome
   /// assets/images/income.png
   static const String imagesIncome = "assets/images/income.png";
+
+  /// Assets for imagesMoney
+  /// assets/images/money.png
+  static const String imagesMoney = "assets/images/money.png";
 
   /// Assets for imagesPrint
   /// assets/images/Print.svg
