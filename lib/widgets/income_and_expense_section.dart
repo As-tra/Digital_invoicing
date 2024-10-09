@@ -14,7 +14,7 @@ class IncomeAndExpenseSection extends StatelessWidget {
         Expanded(
           child: TransactionWidget(
             transactionModel: TransactionModel(
-              amount: 12409,
+              amount: "12’409",
               percentage: "+13%",
               image: Assets.imagesExpenses,
               type: Transaction.expenses,
@@ -25,7 +25,7 @@ class IncomeAndExpenseSection extends StatelessWidget {
         Expanded(
           child: TransactionWidget(
             transactionModel: TransactionModel(
-              amount: 35670,
+              amount: "35’670",
               percentage: "+25%",
               image: Assets.imagesIncome,
               type: Transaction.income,

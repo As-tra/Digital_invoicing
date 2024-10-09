@@ -1,7 +1,7 @@
 import 'package:digital_invoicing/enums/transaction_enum.dart';
 
 class TransactionModel {
-  final double amount;
+  final String amount;
   final String percentage;
   final String image;
   final Transaction type;

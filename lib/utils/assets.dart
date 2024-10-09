@@ -38,6 +38,10 @@ class Assets {
   /// assets/images/Print.svg
   static const String imagesPrint = "assets/images/Print.svg";
 
+  /// Assets for imagesProfit
+  /// assets/images/profit.png
+  static const String imagesProfit = "assets/images/profit.png";
+
   /// Assets for imagesQRcode
   /// assets/images/QRcode.svg
   static const String imagesQRcode = "assets/images/QRcode.svg";
