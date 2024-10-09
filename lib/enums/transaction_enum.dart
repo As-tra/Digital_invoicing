@@ -1,0 +1,6 @@
+
+
+enum Transaction {
+  expenses,
+  income
+}
