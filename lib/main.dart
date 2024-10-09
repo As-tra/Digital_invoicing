@@ -1,7 +1,16 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:digital_invoicing/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const DigitalInvoicing());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) {
+        return const DigitalInvoicing();
+      },
+    ),
+  );
 }
 
 class DigitalInvoicing extends StatelessWidget {
@@ -9,8 +18,11 @@ class DigitalInvoicing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      
+    return MaterialApp.router(
+      builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRouter.router,
     );
   }
 }
