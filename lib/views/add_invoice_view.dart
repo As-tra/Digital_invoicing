@@ -1,4 +1,6 @@
 import 'package:digital_invoicing/widgets/bottom_sheet_header.dart';
+import 'package:digital_invoicing/widgets/client_data.dart';
+import 'package:digital_invoicing/widgets/invoice_information.dart';
 import 'package:flutter/material.dart';
 
 class AddInvoiceView extends StatelessWidget {
@@ -14,6 +16,10 @@ class AddInvoiceView extends StatelessWidget {
         child: const Column(
           children: [
             BottomSheetHeader(),
+            SizedBox(height: 24),
+            InvoiceInformation(),
+            SizedBox(height: 21),
+            ClientData(),
           ],
         ),
       ),

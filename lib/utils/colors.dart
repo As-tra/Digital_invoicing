@@ -6,6 +6,7 @@ abstract class AppColors {
   static const lightPurple = Color(0xffEFEBFB);
   static const lightOrange = Color(0xffFDF4EA);
   static const white = Color(0xffffffff);
+  static const whiteShade = Color(0xfff9f9f9);
   static const orange = Color(0xffF3A35A);
   static const yellow = Color(0xffF8DB7A);
   static const lightText = Color.fromARGB(153, 60, 60, 67);

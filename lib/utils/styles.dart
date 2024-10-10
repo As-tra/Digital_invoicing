@@ -47,6 +47,12 @@ abstract class Styles {
     color: AppColors.primary,
     fontWeight: FontWeight.w500,
   );
+  static const TextStyle gTWalsheimProMedium15 = TextStyle(
+    fontFamily: kGTWalsheimPro,
+    fontSize: 15,
+    color: AppColors.primary,
+    fontWeight: FontWeight.w500,
+  );
   static const TextStyle gTWalsheimProMedium19 = TextStyle(
     fontFamily: kGTWalsheimPro,
     fontSize: 19,
@@ -64,6 +70,12 @@ abstract class Styles {
     fontSize: 20,
     color: AppColors.white,
     fontWeight: FontWeight.w500,
+  );
+  static const TextStyle gTWalsheimProBold23 = TextStyle(
+    fontFamily: kGTWalsheimPro,
+    fontSize: 23,
+    color: AppColors.primary,
+    fontWeight: FontWeight.w700,
   );
   static const TextStyle gTWalsheimProMedium13 = TextStyle(
     fontFamily: kGTWalsheimPro,
