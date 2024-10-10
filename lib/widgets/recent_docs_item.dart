@@ -5,21 +5,22 @@ import 'package:digital_invoicing/widgets/transaction_details_list.dart';
 import 'package:flutter/material.dart';
 
 class RecentDocsItem extends StatelessWidget {
-  const RecentDocsItem({super.key});
+  const RecentDocsItem({super.key, required this.title});
+  final String title;
 
   @override
   Widget build(BuildContext context) {
-    return const CustomCardBackground(
+    return  CustomCardBackground(
       child: DefaultTabController(
         length: 2,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text("Invoices", style: Styles.gTWalsheimProBold20),
-            SizedBox(height: 9),
-            RecentDocsTabBar(),
-            SizedBox(height: 20),
-            TransactionDetailsList(),
+            Text(title, style: Styles.gTWalsheimProBold20),
+            const SizedBox(height: 9),
+            const RecentDocsTabBar(),
+            const SizedBox(height: 20),
+            const TransactionDetailsList(),
           ],
         ),
       ),

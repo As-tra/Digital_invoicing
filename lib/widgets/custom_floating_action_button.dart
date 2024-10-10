@@ -1,5 +1,5 @@
-
 import 'package:digital_invoicing/utils/colors.dart';
+import 'package:digital_invoicing/views/add_invoice_view.dart';
 import 'package:flutter/material.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
@@ -19,7 +19,15 @@ class CustomFloatingActionButton extends StatelessWidget {
             Icons.add,
             color: AppColors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              builder: (context) {
+                return const AddInvoiceView();
+              },
+            );
+          },
         ),
       ),
     );

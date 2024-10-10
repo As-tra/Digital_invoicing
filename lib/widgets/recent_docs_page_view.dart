@@ -21,15 +21,18 @@ class _RecentDocsPageViewState extends State<RecentDocsPageView> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> titles = ["Invoices", "Taxes"];
     return ExpandablePageView.builder(
       clipBehavior: Clip.none,
       padEnds: false,
       controller: _pageController,
-      itemCount: 2,
+      itemCount: titles.length,
       itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.only(right: 16),
-          child: RecentDocsItem(),
+        return Padding(
+          padding: const EdgeInsets.only(right: 16),
+          child: RecentDocsItem(
+            title: titles[index],
+          ),
         );
       },
     );
