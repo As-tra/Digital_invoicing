@@ -12,7 +12,7 @@ class CustomProfitCard extends StatelessWidget {
       child: Column(
         children: [
           CustomProfitLegend(),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           CustomProfitChart(),
         ],
       ),

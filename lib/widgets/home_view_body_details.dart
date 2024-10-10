@@ -2,6 +2,8 @@ import 'package:digital_invoicing/utils/colors.dart';
 import 'package:digital_invoicing/widgets/ads_banner.dart';
 import 'package:digital_invoicing/widgets/custom_profit_card.dart';
 import 'package:digital_invoicing/widgets/income_and_expense_section.dart';
+import 'package:digital_invoicing/widgets/recent_docs_item.dart';
+import 'package:digital_invoicing/widgets/section_title.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBodyDetails extends StatelessWidget {
@@ -10,17 +12,26 @@ class HomeViewBodyDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: _buildDecoration(),
-      child: ListView(
-        children: const [
-          SizedBox(height: 24),
-          CustomProfitCard(),
-          SizedBox(height: 14),
-          IncomeAndExpenseSection(),
-          SizedBox(height: 20),
-          AdsBanner(),
-        ],
+      child: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 24),
+              CustomProfitCard(),
+              SizedBox(height: 14),
+              IncomeAndExpenseSection(),
+              SizedBox(height: 20),
+              AdsBanner(),
+              SizedBox(height: 20),
+              SectionTitle(text: "Recents Docs"),
+              RecentDocsItem(),
+              SizedBox(height: 20),
+            ],
+          ),
+        ),
       ),
     );
   }
