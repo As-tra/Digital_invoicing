@@ -2,7 +2,7 @@ import 'package:digital_invoicing/utils/colors.dart';
 import 'package:digital_invoicing/widgets/ads_banner.dart';
 import 'package:digital_invoicing/widgets/custom_profit_card.dart';
 import 'package:digital_invoicing/widgets/income_and_expense_section.dart';
-import 'package:digital_invoicing/widgets/recent_docs_item.dart';
+import 'package:digital_invoicing/widgets/recent_docs_page_view.dart';
 import 'package:digital_invoicing/widgets/section_title.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +14,7 @@ class HomeViewBodyDetails extends StatelessWidget {
     return Container(
       decoration: _buildDecoration(),
       child: const SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: Column(
@@ -27,7 +28,7 @@ class HomeViewBodyDetails extends StatelessWidget {
               AdsBanner(),
               SizedBox(height: 20),
               SectionTitle(text: "Recents Docs"),
-              RecentDocsItem(),
+              RecentDocsPageView(),
               SizedBox(height: 20),
             ],
           ),

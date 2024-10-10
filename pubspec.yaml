@@ -30,10 +30,11 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.8
   device_preview: ^1.2.0
+  expandable_page_view: ^1.0.17
+  fl_chart: ^0.69.0
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.10+1
-  fl_chart: ^0.69.0
   go_router: ^14.3.0
 
 dev_dependencies:
@@ -80,4 +81,4 @@ flutter_assets:
   assets_path: assets/
   output_path: lib/utils/
   filename: assets.dart
-  field_prefix:
+  field_prefix: null

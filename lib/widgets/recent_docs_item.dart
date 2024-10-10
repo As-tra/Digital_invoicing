@@ -16,6 +16,7 @@ class RecentDocsItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text("Invoices", style: Styles.gTWalsheimProBold20),
+            SizedBox(height: 9),
             RecentDocsTabBar(),
             SizedBox(height: 20),
             TransactionDetailsList(),

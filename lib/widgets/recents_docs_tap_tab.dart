@@ -32,7 +32,10 @@ class RecentDocsTabBar extends StatelessWidget {
                 horizontal: 25,
                 vertical: 12,
               ),
-              child: Text(e),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(e),
+              ),
             );
           },
         ).toList(),

@@ -15,7 +15,7 @@ void main() {
 
 class DigitalInvoicing extends StatelessWidget {
   const DigitalInvoicing({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
