@@ -42,6 +42,10 @@ class Assets {
   /// assets/images/money.png
   static const String imagesMoney = "assets/images/money.png";
 
+  /// Assets for imagesNotFound
+  /// assets/images/not_found.png
+  static const String imagesNotFound = "assets/images/not_found.png";
+
   /// Assets for imagesPrint
   /// assets/images/Print.svg
   static const String imagesPrint = "assets/images/Print.svg";
@@ -58,9 +62,9 @@ class Assets {
   /// assets/images/Search.svg
   static const String imagesSearch = "assets/images/Search.svg";
 
-  /// Assets for imagesSetting
-  /// assets/images/setting.png
-  static const String imagesSetting = "assets/images/setting.png";
+  /// Assets for imagesSettings
+  /// assets/images/Settings.png
+  static const String imagesSettings = "assets/images/Settings.png";
 
   /// Assets for imagesUp
   /// assets/images/Up.png

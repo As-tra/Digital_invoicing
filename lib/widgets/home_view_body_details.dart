@@ -28,6 +28,7 @@ class HomeViewBodyDetails extends StatelessWidget {
               AdsBanner(),
               SizedBox(height: 20),
               SectionTitle(text: "Recents Docs"),
+              SizedBox(height: 15),
               RecentDocsPageView(),
               SizedBox(height: 20),
             ],
