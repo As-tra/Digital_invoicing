@@ -9,7 +9,10 @@ class RevenueAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset(Assets.imagesArrowBack),
+        InkWell(
+          onTap: () => Navigator.of(context).pop(),
+          child: SvgPicture.asset(Assets.imagesArrowBack),
+        ),
         const Spacer(),
         SvgPicture.asset(Assets.imagesPrint),
         const SizedBox(width: 19),

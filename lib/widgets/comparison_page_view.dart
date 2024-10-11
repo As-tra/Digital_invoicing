@@ -13,7 +13,7 @@ class ComparisonPageView extends StatefulWidget {
 
 class _ComparisonPageViewState extends State<ComparisonPageView> {
   final PageController _pageController = PageController(
-    viewportFraction: .92,
+    viewportFraction: .85,
   );
   @override
   void dispose() {

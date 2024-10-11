@@ -26,6 +26,10 @@ class Assets {
   /// assets/images/Calendar.svg
   static const String imagesCalendar = "assets/images/Calendar.svg";
 
+  /// Assets for imagesChargeMore
+  /// assets/images/charge_more.png
+  static const String imagesChargeMore = "assets/images/charge_more.png";
+
   /// Assets for imagesDashboard
   /// assets/images/Dashboard.svg
   static const String imagesDashboard = "assets/images/Dashboard.svg";
@@ -45,6 +49,10 @@ class Assets {
   /// Assets for imagesFilter
   /// assets/images/Filter.svg
   static const String imagesFilter = "assets/images/Filter.svg";
+
+  /// Assets for imagesGetPaid
+  /// assets/images/get_paid.png
+  static const String imagesGetPaid = "assets/images/get_paid.png";
 
   /// Assets for imagesIncome
   /// assets/images/income.png

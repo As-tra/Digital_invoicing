@@ -19,7 +19,7 @@ class ComparisionBarChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150,
+      height: 95,
       child: BarChart(
         BarChartData(
           maxY: 8,

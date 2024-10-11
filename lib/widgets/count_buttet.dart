@@ -13,10 +13,10 @@ class CounteBullet extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundColor: AppColors.primary,
-      radius: 23,
+      radius: 16,
       child: CircleAvatar(
-        radius: 22,
-        backgroundColor: AppColors.whiteShade,
+        radius: 15,
+        backgroundColor: AppColors.white,
         child: Text(
           "$count",
           style: Styles.gTWalsheimProBold20,

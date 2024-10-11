@@ -12,9 +12,14 @@ class ClientDataHeader extends StatelessWidget {
       children: [
         const CounteBullet(count: 2),
         const SizedBox(width: 10),
-        const Text(
-          "Client Data",
-          style: Styles.gTWalsheimProBold23,
+        const Expanded(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              "Client Data",
+              style: Styles.gTWalsheimProBold23,
+            ),
+          ),
         ),
         const Spacer(),
         _buildContact()
@@ -24,18 +29,27 @@ class ClientDataHeader extends StatelessWidget {
 
   Container _buildContact() {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 13),
+      width: 100,
+      padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 12),
       decoration: BoxDecoration(
         color: AppColors.orange,
         borderRadius: BorderRadius.circular(99),
       ),
       child: const Row(
         children: [
-          Icon(Icons.people_alt_outlined),
+          Icon(
+            Icons.people_alt_outlined,
+            size: 18,
+          ),
           SizedBox(width: 3),
-          Text(
-            "Contacts",
-            style: Styles.gTWalsheimProMedium15,
+          Expanded(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                "Contacts",
+                style: Styles.gTWalsheimProMedium15,
+              ),
+            ),
           )
         ],
       ),
