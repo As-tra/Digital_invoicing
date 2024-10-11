@@ -20,7 +20,7 @@ class CustomPercentageTextWidget extends StatelessWidget {
         FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            "$percentage YoY",
+            percentage,
             style: Styles.gTWalsheimProMedium13.copyWith(
               color: AppColors.purple,
               fontFamily: "",

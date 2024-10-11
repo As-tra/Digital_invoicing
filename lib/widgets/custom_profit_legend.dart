@@ -1,14 +1,15 @@
-import 'package:digital_invoicing/utils/assets.dart';
+import 'package:digital_invoicing/models/legend_model.dart';
 import 'package:digital_invoicing/utils/styles.dart';
 import 'package:digital_invoicing/widgets/custom_percentage_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomProfitLegend extends StatelessWidget {
-  const CustomProfitLegend({super.key});
+  const CustomProfitLegend({super.key, required this.legendModel});
+  final LegendModel legendModel;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
@@ -17,23 +18,27 @@ class CustomProfitLegend extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "23’261\$",
+                  "${legendModel.amount}\$",
                   style: Styles.gTWalsheimProBold27,
                 ),
-                SizedBox(width: 13),
-                CustomPercentageTextWidget(percentage: "+10%"),
+                const SizedBox(width: 13),
+                CustomPercentageTextWidget(
+                  percentage: legendModel.percentage,
+                ),
               ],
             ),
             Text(
-              "Profit",
+              legendModel.title,
               style: Styles.gTWalsheimProRegular16,
             ),
           ],
         ),
-        Image(
-          image: AssetImage(Assets.imagesProfit),
-          height: 50,
-        ),
+        legendModel.image == null
+            ? const SizedBox.shrink()
+            : Image(
+                image: AssetImage(legendModel.image!),
+                height: 50,
+              ),
       ],
     );
   }
