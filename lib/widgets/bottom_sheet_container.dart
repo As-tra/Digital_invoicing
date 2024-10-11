@@ -11,6 +11,7 @@ class BottomSheetContainer extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
+        color: AppColors.white,
         border: Border.all(
           color: AppColors.primary,
         ),

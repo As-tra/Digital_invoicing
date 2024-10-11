@@ -4,36 +4,47 @@ import 'package:digital_invoicing/widgets/count_buttet.dart';
 import 'package:flutter/material.dart';
 
 class InvoiceInformation extends StatelessWidget {
-  const InvoiceInformation({super.key});
+  const InvoiceInformation({
+    super.key,
+    required this.title,
+    this.info,
+    required this.count,
+  });
+  final String title;
+  final String? info;
+  final int count;
 
   @override
   Widget build(BuildContext context) {
-    return const BottomSheetContainer(
+    return BottomSheetContainer(
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 12),
+        padding: const EdgeInsets.symmetric(vertical: 8),
         child: Row(
           children: [
-            CounteBullet(count: 1),
-            SizedBox(width: 10),
+            CounteBullet(count: count),
+            const SizedBox(width: 10),
             Expanded(
               child: FittedBox(
                 fit: BoxFit.scaleDown,
                 child: Text(
-                  "Invoice information",
+                  title,
                   style: Styles.gTWalsheimProBold20,
                 ),
               ),
             ),
-            SizedBox(width: 27),
-            Expanded(
-              child: FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  "#27 · 07/08/2022 ",
-                  style: Styles.gTWalsheimProRegular16,
-                ),
-              ),
-            ),
+            const SizedBox(width: 27),
+            info == null
+                ? const SizedBox()
+                : Expanded(
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        info!,
+                        style: Styles.gTWalsheimProRegular16,
+                      ),
+                    ),
+                  ),
+            info == null ? const Spacer() : const SizedBox.shrink(),
           ],
         ),
       ),

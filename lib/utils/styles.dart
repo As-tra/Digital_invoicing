@@ -101,6 +101,12 @@ abstract class Styles {
     color: AppColors.primary,
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle gTWalsheimProBold16 = TextStyle(
+    fontFamily: kGTWalsheimPro,
+    fontSize: 20,
+    color: AppColors.white,
+    fontWeight: FontWeight.w700,
+  );
   static const TextStyle gTWalsheimProBold25 = TextStyle(
     fontFamily: kGTWalsheimPro,
     fontSize: 25,

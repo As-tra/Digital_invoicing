@@ -1,5 +1,6 @@
 import 'package:digital_invoicing/widgets/bottom_sheet_header.dart';
 import 'package:digital_invoicing/widgets/client_data.dart';
+import 'package:digital_invoicing/widgets/final_action.dart';
 import 'package:digital_invoicing/widgets/invoice_information.dart';
 import 'package:flutter/material.dart';
 
@@ -13,14 +14,29 @@ class AddInvoiceView extends StatelessWidget {
       child: Container(
         decoration: _buildDecoration(),
         padding: _getPadding(context),
-        child: const Column(
-          children: [
-            BottomSheetHeader(),
-            SizedBox(height: 24),
-            InvoiceInformation(),
-            SizedBox(height: 21),
-            ClientData(),
-          ],
+        child: const SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              SizedBox(height: 16),
+              BottomSheetHeader(),
+              SizedBox(height: 24),
+              InvoiceInformation(
+                title: "Invoice information",
+                info: "#27 · 07/08/2022 ",
+                count: 1,
+              ),
+              SizedBox(height: 21),
+              ClientData(),
+              SizedBox(height: 21),
+              InvoiceInformation(
+                title: "Items & Payment",
+                count: 3,
+              ),
+              SizedBox(height: 23),
+              FinalAction(),
+            ],
+          ),
         ),
       ),
     );
@@ -35,10 +51,9 @@ class AddInvoiceView extends StatelessWidget {
 
   EdgeInsets _getPadding(BuildContext context) {
     return EdgeInsets.only(
-      top: 16,
       left: 16,
       right: 16,
-      bottom: MediaQuery.of(context).viewInsets.bottom + 32,
+      bottom: MediaQuery.of(context).viewInsets.bottom + 20,
     );
   }
 }
