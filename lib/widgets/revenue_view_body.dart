@@ -1,3 +1,4 @@
+import 'package:digital_invoicing/widgets/comparison_page_view.dart';
 import 'package:digital_invoicing/widgets/filter_bar.dart';
 import 'package:digital_invoicing/widgets/revenue_app_bar.dart';
 import 'package:digital_invoicing/widgets/revenue_char_card.dart';
@@ -24,6 +25,8 @@ class RevenueViewBody extends StatelessWidget {
               FilterBar(),
               SizedBox(height: 19),
               RevenueCharCard(),
+              SizedBox(height: 20),
+              ComparisonPageView(),
             ],
           ),
         ),

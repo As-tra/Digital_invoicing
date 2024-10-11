@@ -3,28 +3,26 @@ import 'package:digital_invoicing/utils/styles.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class RevenuesBarChart extends StatelessWidget {
-  const RevenuesBarChart({super.key});
-
-  static List barsValues = [
-    7.5,
-    8.2,
-    4.1,
-    7.9,
-    5.95,
-    7.8,
-    5.2,
-    9.6,
-    3.6,
+class ComparisionBarChart extends StatelessWidget {
+  const ComparisionBarChart({super.key, required this.color});
+  final Color color;
+  static List<List<double>> barsValues = [
+    [7.5, 5.6],
+    [6.7, 4],
+    [4.1, 6.4],
+    [7.8, 5.4],
+    [5.8, 6.9],
+    [7.3, 4.7],
+    [5.7, 5.9],
   ];
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 140,
+      height: 150,
       child: BarChart(
         BarChartData(
-          maxY: 10,
+          maxY: 8,
           minY: 0,
           barGroups: _buildBars(),
           borderData: _getBorder(),
@@ -102,12 +100,8 @@ class RevenuesBarChart extends StatelessWidget {
         text = 'Jun';
       case 6:
         text = 'Jul';
-      case 7:
-        text = 'Aug';
-      case 8:
-        text = 'Oct';
       default:
-        text = 'Sep';
+        text = 'Jul';
     }
     return Padding(
       padding: const EdgeInsets.only(top: 7.0),
@@ -126,22 +120,25 @@ class RevenuesBarChart extends StatelessWidget {
   }
 
   List<BarChartGroupData> _buildBars() {
-    return barsValues
-        .asMap()
-        .entries
-        .map(
-          (ele) => BarChartGroupData(
-            x: ele.key,
-            barRods: [
-              BarChartRodData(
-                borderRadius: BorderRadius.circular(3),
-                width: 10,
-                toY: ele.value,
-                color: AppColors.purple,
-              ),
-            ],
-          ),
-        )
-        .toList();
+    return barsValues.asMap().entries.map(
+      (ele) {
+        return BarChartGroupData(
+          barsSpace: -2,
+          x: ele.key,
+          barRods: [
+            BarChartRodData(
+              width: 9,
+              toY: ele.value[0],
+              color: AppColors.purple,
+            ),
+            BarChartRodData(
+              width: 9,
+              toY: ele.value[1],
+              color: color,
+            )
+          ],
+        );
+      },
+    ).toList();
   }
 }
